@@ -2,10 +2,10 @@ import Header from "../Mini Components/Header"
 import CreateTask from "../Mini Components/CreateTask"
 import AllTasks from "../Mini Components/AllTasks";
 
-const AdminDashBoard = ()=>{
+const AdminDashBoard = (props)=>{
     return(
         <div>
-            <Header />
+            <Header changeUser={props.changeUser} data={props.data}/>
             <CreateTask />
             <AllTasks />
         </div>

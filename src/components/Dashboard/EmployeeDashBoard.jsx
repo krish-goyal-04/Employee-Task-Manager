@@ -1,12 +1,12 @@
 import Header from "../Mini Components/Header";
 import TaskListMenu from "../Mini Components/TaskListMenu";
 import TasksContainer from "../TaskList/TasksContainer";
-const EmployeeDashboard = ()=>{
+const EmployeeDashboard = (props)=>{
     return(
         <div className=" h-screen w-screen">
-            <Header />
-            <TaskListMenu />
-            <TasksContainer />
+            <Header changeUser={props.changeUser} data={props.data} />
+            <TaskListMenu data={props.data}/>
+            <TasksContainer data={props.data}/>
         </div>
     )
 }

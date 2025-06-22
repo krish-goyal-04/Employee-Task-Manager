@@ -1,8 +1,15 @@
 const employees = [
   {
     id: 1,
+    name: "Aarav Sharma",
     email: "employee1@example.com",
     password: "123",
+    taskStats: {
+      active: 2,
+      completed: 1,
+      newTask: 1,
+      failed: 0
+    },
     tasks: [
       {
         title: "Fix login bug",
@@ -38,8 +45,15 @@ const employees = [
   },
   {
     id: 2,
+    name: "Riya Mehta",
     email: "employee2@example.com",
     password: "123",
+    taskStats: {
+      active: 2,
+      completed: 1,
+      newTask: 2,
+      failed: 1
+    },
     tasks: [
       {
         title: "Write unit tests",
@@ -85,8 +99,15 @@ const employees = [
   },
   {
     id: 3,
+    name: "Kabir Nair",
     email: "employee3@example.com",
     password: "123",
+    taskStats: {
+      active: 1,
+      completed: 1,
+      newTask: 1,
+      failed: 0
+    },
     tasks: [
       {
         title: "Optimize images",
@@ -112,8 +133,15 @@ const employees = [
   },
   {
     id: 4,
+    name: "Ishaan Verma",
     email: "employee4@example.com",
     password: "123",
+    taskStats: {
+      active: 1,
+      completed: 1,
+      newTask: 1,
+      failed: 1
+    },
     tasks: [
       {
         title: "Integrate payment gateway",
@@ -149,8 +177,15 @@ const employees = [
   },
   {
     id: 5,
+    name: "Sneha Reddy",
     email: "employee5@example.com",
     password: "123",
+    taskStats: {
+      active: 2,
+      completed: 1,
+      newTask: 2,
+      failed: 1
+    },
     tasks: [
       {
         title: "Design review",
@@ -195,14 +230,14 @@ const employees = [
     ]
   }
 ];
-
-const admin = [
-  {
+const admin = 
+ [ {
     id: 1,
+    name:"Admin",
     email: "admin@example.com",
     password: "123"
-  }
-];
+  }]
+;
 
 export const setLocalStorage=()=>{
     localStorage.setItem('employees',JSON.stringify(employees))

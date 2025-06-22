@@ -14,12 +14,12 @@ const Login = ({handleLogin})=>{
 
 
     return(
-        <div className="flex h-screen w-screen items-center justify-center bg-black">
-            <div className="bg-amber-50 h-3/5 w-2/5 rounded-3xl">
+        <div className="flex h-screen w-screen items-center justify-center ">
+            <div className="bg-amber-100 h-3/5 w-2/6 rounded-3xl">
                 <form 
                     onSubmit={(e)=>{submitHandler(e)}}
                     className="flex flex-col justify-center items-center p-7">
-                    <label className="font-bold text-2xl mb-7">Login</label>
+                    <label className="font-bold text-3xl mb-7">Login</label>
                     <input required 
                         value={email}
                         onChange={(e)=>{setEmail(e.target.value)}}
