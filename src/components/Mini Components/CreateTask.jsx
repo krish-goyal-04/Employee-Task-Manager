@@ -7,12 +7,21 @@ const CreateTask = ()=>{
     const[date,setDate]=useState("")
     const[empName,setEmpName]=useState("")
     const[taskCategory,setTaskCategory]=useState("")
-
-    const[task,setTask]=useState({})
-
+    
     const submitHandler = (e)=>{
         e.preventDefault()
-        setTask({})
+
+        const task = {title,description,date,taskCategory,active:false,newTask:true,completed:false,failed:false}
+
+        const data = JSON.parse(localStorage.getItem('employees'))
+        data.forEach((elem)=>{
+            if(empName == elem.name){
+                elem.tasks.push(task)
+            }
+        })
+
+        localStorage.setItem('employees',JSON.stringify(data))
+
         setTaskCategory("")
         setDate("")
         setDescription("")
