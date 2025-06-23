@@ -34,7 +34,7 @@ const CreateTask = ()=>{
     }
     
     return(
-        <div className="text-black rounded-xl flex flex-col justify-center items-center bg-amber-100 mt-14 p-10 mx-[30%]">
+        <div className="text-black rounded-xl flex flex-col justify-center items-center bg-amber-100 mt-14 p-10 mx-[20%]">
                 <h1 className="text-3xl mb-10 font-bold">Add Task</h1>
                 <form onSubmit={(e)=>{submitHandler(e)}} className="w-[90%]  flex flex-col justify-center items-center ">
                     <h3 className="font-semibold mb-1">Task Title</h3>
