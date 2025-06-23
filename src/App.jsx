@@ -8,10 +8,9 @@ import {AuthContext} from "./context/AuthProvider"
   const[user, setUser] = useState('')
   const[loggedInUserData, setLoggedInUserData] = useState(null)
 
-  const authData = useContext(AuthContext)
+  const {userData} = useContext(AuthContext)
   useEffect(()=>{
     const loggedInUser = localStorage.getItem('loggedInUser')
-    console.log(loggedInUser)
     if(loggedInUser){
       const userData = JSON.parse(loggedInUser)
       console.log(userData)
@@ -22,8 +21,8 @@ import {AuthContext} from "./context/AuthProvider"
 
 
   const handleLogin = (email,password)=>{
-    if(authData && email.includes("admin")){
-      const admin = authData.adminData.find((a)=>a.email==email && a.password==password)
+    if(userData && email.includes("admin")){
+      const admin = userData.adminData.find((a)=>a.email==email && a.password==password)
       if(admin){
         setUser('admin')
         setLoggedInUserData(admin)
@@ -32,8 +31,8 @@ import {AuthContext} from "./context/AuthProvider"
       }
       
     }
-    else if(authData){
-      const employee = authData.employeesData.find((e)=>e.email==email && e.password==password)
+    else if(userData){
+      const employee = userData.employeesData.find((e)=>e.email==email && e.password==password)
       if(employee){
         setUser('employee')
         setLoggedInUserData(employee)
@@ -49,7 +48,7 @@ import {AuthContext} from "./context/AuthProvider"
   return(
     <>
       {!user ? <Login handleLogin={handleLogin} />: null}
-      {user=='admin'?<AdminDashBoard changeUser={setUser} data={loggedInUserData}/>: (user == 'employee'? <EmployeeDashboard changeUser={setUser} data={loggedInUserData}/>:null)}
+      {user=='admin'?<AdminDashBoard changeUser={setUser} data={userData?.adminData?.find(a=>a.email === loggedInUserData?.email)}/>: (user == 'employee'? <EmployeeDashboard changeUser={setUser} data={userData?.employeesData?.find(e=>e.email === loggedInUserData.email)}/>:null)}
     </>
   )
  }

@@ -9,8 +9,8 @@ const AcceptTask = ({task})=>{
                 <h2 className="font-semibold mt-6 text-xl">{task.title}</h2>
                 <p className="">{task.description}</p>
                 <div className="flex justify-between mt-4 ">
-                    <button className="rounded-3xl cursor-pointer bg-green-400 p-1 w-4/10 text-neutral-200 hover:bg-green-500">Completed</button>
-                    <button className="rounded-3xl cursor-pointer bg-orange-400 p-1 w-4/10 text-neutral-200 hover:bg-orange-500">Failed</button>
+                    <button className="rounded-3xl cursor-pointer bg-green-600 p-1 w-4/10 text-neutral-200 hover:bg-green-700">Completed</button>
+                    <button className="rounded-3xl cursor-pointer bg-orange-600 p-1 w-4/10 text-neutral-200 hover:bg-orange-700">Failed</button>
                 </div>
             </div>
     )
