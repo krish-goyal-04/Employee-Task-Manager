@@ -15,7 +15,7 @@ const Login = ({handleLogin})=>{
 
     return(
         <div className="flex h-screen w-screen items-center justify-center ">
-            <div className="bg-amber-100 h-3/5 w-2/6 rounded-3xl">
+            <div className="bg-amber-100 h-3/6 w-2/6 rounded-3xl">
                 <form 
                     onSubmit={(e)=>{submitHandler(e)}}
                     className="flex flex-col justify-center items-center p-7">
@@ -28,7 +28,7 @@ const Login = ({handleLogin})=>{
                         value={password}
                         onChange={(e)=>{setPassword(e.target.value)}}
                         className="border-solid border-2  bg-amber-100 rounded-3xl my-2 p-1.5 w-11/12 hover:bg-yellow-200" type="password" placeholder="Enter password" />
-                    <button className="rounded-3xl cursor-pointer bg-blue-500 p-1 w-4/10 text-neutral-200 hover:bg-blue-700">Submit</button>
+                    <button className="rounded-3xl mt-9 cursor-pointer bg-blue-500 p-1 w-4/10 text-neutral-200 hover:bg-blue-700 text-white">Submit</button>
                 </form>
             </div>
             
