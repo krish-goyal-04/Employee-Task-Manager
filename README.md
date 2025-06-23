@@ -6,19 +6,17 @@ A responsive, role-based task management system built using **React**, **Tailwin
 
 ## 📸 Screenshots
 
-```
-Login Page
-![Screenshot 2025-06-24 012127](https://github.com/user-attachments/assets/a35c752d-237c-4bc5-9434-918a256ae01c)
 
-Admin Dashboard
-![Screenshot 2025-06-24 012421](https://github.com/user-attachments/assets/4e497c1c-f511-4189-aab7-5ffbf9088fa3)
-![Screenshot 2025-06-24 012441](https://github.com/user-attachments/assets/7fd44219-d2c8-40c2-86e0-437167ff964b)
+### 🔐 Login Page  
+![Login](./Screenshots/Login.png)
 
-Employee Dashboard
-![Screenshot 2025-06-24 012208](https://github.com/user-attachments/assets/22068a00-f3f9-4e0d-9a5d-fb435bfe54ec)
-![Screenshot 2025-06-24 012334](https://github.com/user-attachments/assets/a08411b6-7f13-49fb-9dff-b568abc9f82a)
+### 🛠️ Admin Dashboard  
+![Admin View 1](./Screenshots/Admin1.png)  
+![Admin View 2](./Screenshots/Admin2.png)
 
-```
+### 👷 Employee Dashboard  
+![Employee View 1](./Screenshots/Employee1.png)  
+![Employee View 2](./Screenshots/Employee2.png)
 
 
 ---
